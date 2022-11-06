@@ -7,7 +7,7 @@ import { LayoutProvider } from "../context/layout.context";
 import Layout from "src/components/Layout";
 import Head from "next/head";
 
-axios.defaults.baseURL = "http://localhost:3000"
+axios.defaults.baseURL = process.env.VERCEL_URL
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
 
